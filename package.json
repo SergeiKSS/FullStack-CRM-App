@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-crm-app",
+  "version": "1.0.0",
+  "description": "FullStack-CRM-App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeiKSS/FullStack-CRM-App.git"
+  },
+  "keywords": [
+    "FullStack-CRM-App"
+  ],
+  "author": "Siarhei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeiKSS/FullStack-CRM-App/issues"
+  },
+  "homepage": "https://github.com/SergeiKSS/FullStack-CRM-App#readme"
+}
