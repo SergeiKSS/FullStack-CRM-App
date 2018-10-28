@@ -13,4 +13,5 @@ const userSchema = new Schema({
   }
 });
 
+mongoose.set('useFindAndModify', false);
 module.exports = mongoose.model('users', userSchema);
