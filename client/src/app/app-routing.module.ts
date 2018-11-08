@@ -4,6 +4,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { AuthLayoutsComponent } from './shared/layouts/auth-layouts/auth-layouts.component';
 import { SiteLayoutsComponent } from './shared/layouts/site-layouts/site-layouts.component';
+import { AuthGuard } from './shared/classes/auth.guard';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
   {
       path: '',
       component: SiteLayoutsComponent,
+      canActivate: [AuthGuard],
       children: []
   }
 ];
