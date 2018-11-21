@@ -4,7 +4,7 @@ const errorHandler = require('../utils/errorHandler');
 
 module.exports.overview = async function(req, res){
   try {
-    const allOrders = await Order.find({user: req.user.id}).sort(1);
+    const allOrders = await Order.find({user: req.user.id}).sort({ date: 1});
     const ordersMap = getOrdersMap(allOrders);
     const yesterdayOrders = ordersMap[moment().add(-1, 'd').format('DD.MM.YYYY')] || [];
     const yesterdayOrdersNumber = yesterdayOrders.length;
@@ -20,14 +20,14 @@ module.exports.overview = async function(req, res){
     const compareNumber = (yesterdayOrdersNumber - ordersPerDay).toFixed(2);
     res.status(200).json({
       gain: {
-        percent: Math.abc(+gainPercent),
-        compare: Math.abc(+compareGain),
+        percent: Math.abs(+gainPercent),
+        compare: Math.abs(+compareGain),
         yesterday: +yesterdayGain,
         isHigher: +gainPercent > 0
       },
       orders: {
-        percent: Math.abc(+ordersPercent),
-        compare: Math.abc(+compareNumber),
+        percent: Math.abs(+ordersPercent),
+        compare: Math.abs(+compareNumber),
         yesterday: +yesterdayOrdersNumber,
         isHigher: +ordersPercent > 0
       }
