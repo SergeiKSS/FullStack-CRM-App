@@ -11,6 +11,8 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~7.0.3",
+    "@angular/compiler-cli": "~7.0.0",
     "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
@@ -24,12 +26,11 @@
     "core-js": "^2.5.4",
     "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "typescript": "~3.1.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
-    "@angular/cli": "~7.0.3",
-    "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
@@ -45,6 +46,5 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.1"
   }
 }
